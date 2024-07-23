@@ -1,5 +1,5 @@
 {
-    "name": "manage_space",
+    "name": "kintone_manage_space",
     "version": "1.0.0",
     "description": "A Node.js script for automating the creation, update, display, and deletion of kintone spaces.",
     "main": "manage_space.js",
