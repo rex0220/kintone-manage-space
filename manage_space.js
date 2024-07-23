@@ -5,12 +5,13 @@
  * このスクリプトは、kintoneのスペースを作成、更新、表示、削除するためのツールです。
  * スペース管理を自動化し、CLIから簡単に操作できます。
  */
+
 const axios = require('axios');
 const yargs = require('yargs');
 const fs = require('fs');
 const readline = require('readline');
 const { red, blue } = require('kleur');
-require('dotenv').config();
+require('dotenv').config(); // dotenvを使用して環境変数を読み込み
 
 // コマンドライン引数のパース
 const argv = yargs
@@ -80,8 +81,20 @@ const argv = yargs
             if (!fs.existsSync(argv.envfile)) {
                 throw new Error(red(`指定された.envファイルが見つかりません: ${argv.envfile}`));
             }
-            require('dotenv').config({ path: argv.envfile });
+            const result = require('dotenv').config({ path: argv.envfile });
+            if (result.error) {
+                throw result.error;
+            }
+
+            // .env ファイルの値で環境変数を上書き
+            const envConfig = result.parsed;
+            if (envConfig) {
+                if (envConfig.KINTONE_DOMAIN) process.env.KINTONE_DOMAIN = envConfig.KINTONE_DOMAIN;
+                if (envConfig.KINTONE_USERNAME) process.env.KINTONE_USERNAME = envConfig.KINTONE_USERNAME;
+                if (envConfig.KINTONE_PASSWORD) process.env.KINTONE_PASSWORD = envConfig.KINTONE_PASSWORD;
+            }
         }
+
         if (!argv.domain && !process.env.KINTONE_DOMAIN) {
             throw new Error(red('ドメインを指定するか、環境変数KINTONE_DOMAINを設定してください。'));
         }
