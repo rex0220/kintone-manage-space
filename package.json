@@ -1,10 +1,13 @@
 {
-    "name": "kintone_manage_space",
-    "version": "1.0.0",
+    "name": "@rex0220/kintone_manage_space",
+    "version": "1.0.1",
     "description": "A Node.js script for automating the creation, update, display, and deletion of kintone spaces.",
     "main": "manage_space.js",
+    "bin": {
+        "rex0220-manage_space": "./bin/index.js"
+    },
     "scripts": {
-        "start": "node manage_space.js"
+        "start": "rex0220-manage_space"
     },
     "author": "rex0220",
     "license": "MIT",
@@ -13,5 +16,20 @@
         "dotenv": "^8.2.0",
         "kleur": "^4.1.4",
         "yargs": "^16.2.0"
-    }
+    },
+    "directories": {
+        "doc": "docs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rex0220/kintone_manage_space.git"
+    },
+    "keywords": [
+        "kintone",
+        "plugin"
+    ],
+    "bugs": {
+        "url": "https://github.com/rex0220/kintone_manage_space/issues"
+    },
+    "homepage": "https://github.com/rex0220/kintone_manage_space#readme"
 }
