@@ -1,5 +1,5 @@
 
-# manage_space.js
+# manage-space.js
 
 Node.jsスクリプトを使用して、kintoneのスペースの作成、更新、表示、および削除を自動化します。コマンドラインから簡単にkintoneスペースを管理できます。
 
@@ -21,8 +21,8 @@ Node.jsスクリプトを使用して、kintoneのスペースの作成、更新
 1. リポジトリをクローンします：
 
     ```bash
-    git clone https://github.com/your-username/manage_space.git
-    cd manage_space
+    git clone https://github.com/rex0220/kintone-manage-space.git
+    cd kintone-manage-space
     ```
 
 2. 依存関係をインストールします：
@@ -86,25 +86,25 @@ export KINTONE_PASSWORD="your_password"
 ##### スペースの作成
 
 ```bash
-node manage_space.js -e .env -a create -s "新しいスペース" -f true -c EVERYONE
+node manage-space.js -e .env -a create -s "新しいスペース" -f true -c EVERYONE
 ```
 
 ##### スペース情報の表示
 
 ```bash
-node manage_space.js -e .env -a show -i 123
+node manage-space.js -e .env -a show -i 123
 ```
 
 ##### スペースの更新
 
 ```bash
-node manage_space.js -e .env -a update -i 123 -s "更新されたスペース名" -c ADMIN
+node manage-space.js -e .env -a update -i 123 -s "更新されたスペース名" -c ADMIN
 ```
 
 ##### スペースの削除
 
 ```bash
-node manage_space.js -e .env -a delete -i 123
+node manage-space.js -e .env -a delete -i 123
 ```
 
 #### 環境変数を直接設定する場合
@@ -112,25 +112,25 @@ node manage_space.js -e .env -a delete -i 123
 ##### スペースの作成
 
 ```bash
-node manage_space.js -a create -s "新しいスペース" -f true -c EVERYONE
+node manage-space.js -a create -s "新しいスペース" -f true -c EVERYONE
 ```
 
 ##### スペース情報の表示
 
 ```bash
-node manage_space.js -a show -i 123
+node manage-space.js -a show -i 123
 ```
 
 ##### スペースの更新
 
 ```bash
-node manage_space.js -a update -i 123 -s "更新されたスペース名" -c ADMIN
+node manage-space.js -a update -i 123 -s "更新されたスペース名" -c ADMIN
 ```
 
 ##### スペースの削除
 
 ```bash
-node manage_space.js -a delete -i 123
+node manage-space.js -a delete -i 123
 ```
 
 ## 貢献

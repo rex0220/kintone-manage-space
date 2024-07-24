@@ -1,7 +1,7 @@
-# kintone_manage_space
-manage_space.js: kintoneのスペースの作成、更新、表示、削除を自動化するためのNode.jsスクリプト。コマンドラインから簡単にkintoneスペースを管理できます。
+# kintone_manage-space
+manage-space.js: kintoneのスペースの作成、更新、表示、削除を自動化するためのNode.jsスクリプト。コマンドラインから簡単にkintoneスペースを管理できます。
 
-# manage_space.js
+# manage-space.js
 
 A Node.js script for automating the creation, update, display, and deletion of kintone spaces. Easily manage your kintone spaces from the command line.
 
@@ -23,8 +23,8 @@ A Node.js script for automating the creation, update, display, and deletion of k
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/manage_space.git
-    cd manage_space
+    git clone https://github.com/rex0220/kintone-manage-space.git
+    cd kintone-manage-space
     ```
 
 2. Install the dependencies:
@@ -88,25 +88,25 @@ export KINTONE_PASSWORD="your_password"
 ##### Create a Space
 
 ```bash
-node manage_space.js -e .env -a create -s "New Space" -f true -c EVERYONE
+node manage-space.js -e .env -a create -s "New Space" -f true -c EVERYONE
 ```
 
 ##### Show Space Information
 
 ```bash
-node manage_space.js -e .env -a show -i 123
+node manage-space.js -e .env -a show -i 123
 ```
 
 ##### Update a Space
 
 ```bash
-node manage_space.js -e .env -a update -i 123 -s "Updated Space Name" -c ADMIN
+node manage-space.js -e .env -a update -i 123 -s "Updated Space Name" -c ADMIN
 ```
 
 ##### Delete a Space
 
 ```bash
-node manage_space.js -e .env -a delete -i 123
+node manage-space.js -e .env -a delete -i 123
 ```
 
 #### Using Environment Variables Directly
@@ -114,25 +114,25 @@ node manage_space.js -e .env -a delete -i 123
 ##### Create a Space
 
 ```bash
-node manage_space.js -a create -s "New Space" -f true -c EVERYONE
+node manage-space.js -a create -s "New Space" -f true -c EVERYONE
 ```
 
 ##### Show Space Information
 
 ```bash
-node manage_space.js -a show -i 123
+node manage-space.js -a show -i 123
 ```
 
 ##### Update a Space
 
 ```bash
-node manage_space.js -a update -i 123 -s "Updated Space Name" -c ADMIN
+node manage-space.js -a update -i 123 -s "Updated Space Name" -c ADMIN
 ```
 
 ##### Delete a Space
 
 ```bash
-node manage_space.js -a delete -i 123
+node manage-space.js -a delete -i 123
 ```
 
 ## Contributing
